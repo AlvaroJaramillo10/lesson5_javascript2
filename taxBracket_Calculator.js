@@ -76,14 +76,44 @@ function calculateTax(){
            
            
            
-          else if(status == 1) {
+           if(status == 1) {
                 //INSERT YOUR CODE BELOW
-  
-  
-  
-  
-  
-  
+               if (income <= 18650){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 75900) {
+                 tax = 18650 * 0.10 + (income - 18650) * 0.12;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 153100) {
+                 tax = 18650 * 0.10 + (75900 - 18650) * 0.12 + (income - 75900) * 0.22;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 233350) {
+                 tax = 18650 * 0.10 + (75900 - 18650) * 0.12 +
+                       (153100 - 75900) * 0.22 + (income - 153100) * 0.24;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 416700) {
+                 tax = 18650 * 0.10 + (75900 - 18650) * 0.12 +
+                       (153100 - 75900) * 0.22 + (233350 - 153100) * 0.24 +
+                       (income - 233350) * 0.32;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 470700) {
+                  tax = 18650 * 0.10 + (75900 - 18650) * 0.12 +
+                        (153100 - 75900) * 0.22 + (233350 - 153100) * 0.24 +
+                        (416700 - 233350) * 0.32 + (income - 416700) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 18650 * 0.10 + (75900 - 18650) * 0.12 +
+                        (153100 - 75900) * 0.22 + (233350 - 153100) * 0.24 +
+                        (416700 - 233350) * 0.32 + (470700 - 416700 ) * 0.35 + (income - 470700) * .37;
+                  taxRate = 39;}
+                  
+                  
           }//end of married file jointly calculation
           
           
@@ -103,12 +133,44 @@ function calculateTax(){
                  
                  
                  
-          else if(status == 2) {
+           if(status == 2) {
                 //INSERT YOUR CODE BELOW
-
-             
-             
-             
+               if (income <= 9325){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37950) {
+                 tax = 9325 * 0.10 + (income - 9325) * 0.12;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 76550) {
+                 tax = 9325 * 0.10 + (37950 - 9325) * 0.12 + (income - 37950) * 0.22;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 116675) {
+                 tax = 9325 * 0.10 + (37950 - 9325) * 0.12 +
+                       (76550 - 37950) * 0.22 + (income - 76550) * 0.24;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 208350) {
+                 tax = 9325 * 0.10 + (37950 - 9325) * 0.12 +
+                       (76550 - 37950) * 0.22 + (116675 - 76550) * 0.24 +
+                       (income - 116675) * 0.32;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 235350) {
+                  tax = 9325 * 0.10 + (37950 - 9325) * 0.12 +
+                        (76550 - 37950) * 0.22 + (116675 - 76550) * 0.24 +
+                        (208350 - 116675) * 0.32 + (income - 208350) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9325 * 0.10 + (37950 - 9325) * 0.12 +
+                        (76550 - 37950) * 0.22 + (116675 - 76550) * 0.24 +
+                        (208350 - 116675) * 0.32 + (235350 - 208350 ) * 0.35 + (income - 235350) * .37;
+                  taxRate = 39;
+               }
+                  
           }//end of married file separately calculation
         
         
@@ -128,13 +190,44 @@ function calculateTax(){
           
           
           
-          else if(status == 3) {
+          if(status == 3) {
                 //INSERT YOUR CODE BELOW
- 
- 
-
-
-             
+               if (income <= 13350){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 50800) {
+                 tax = 13350 * 0.10 + (income - 13350) * 0.12;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 131200) {
+                 tax = 13350 * 0.10 + (50800 - 13350) * 0.12 + (income - 50800) * 0.22;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 116675) {
+                 tax = 13350 * 0.10 + (50800 - 13350) * 0.12 +
+                       (131200 - 50800) * 0.22 + (income - 131200) * 0.24;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 416700) {
+                 tax = 13350 * 0.10 + (50800 - 13350) * 0.12 +
+                       (131200 - 50800) * 0.22 + (116675 - 131200) * 0.24 +
+                       (income - 116675) * 0.32;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 444550) {
+                  tax = 13350 * 0.10 + (50800 - 13350) * 0.12 +
+                        (131200 - 50800) * 0.22 + (116675 - 131200) * 0.24 +
+                        (416700 - 116675) * 0.32 + (income - 416700) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 13350 * 0.10 + (50800 - 13350) * 0.12 +
+                        (131200 - 50800) * 0.22 + (116675 - 131200) * 0.24 +
+                        (416700 - 116675) * 0.32 + (444550 - 416700 ) * 0.35 + (income - 444550) * .37;
+                  taxRate = 39;}
+                  
+                  
           }//end of head of household calculation
           
           
@@ -153,7 +246,7 @@ function calculateTax(){
            *                number of digits appear after the decimal place for the value.
            *
            *                The innerHTML property used with the document.getElementById() sets or
-           *                returns the HTML content (inner HTML) of an element.
+           *                returs the HTML content (inner HTML) of an element.
            * ************************************************************************************/
            
            
@@ -200,11 +293,14 @@ function clearButton () {
               //This code resets the dropdown box to the "Single" filer status.
               document.getElementById("filingStatus").selectedIndex = 0;
               
+              
+              
+              
+              
+              
+              
              //INSERT YOUR CODE BELOW
-
-
-
-
-
+             
+             document.getElementById("taxEstimate").innerHTML = "";
+             document.getElementById("taxBracket").innerHTML = "";
 }//end of clearButton function
-      
